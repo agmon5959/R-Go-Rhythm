@@ -1,8 +1,8 @@
 // [실버4] https://www.acmicpc.net/problem/2164
 // let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 let input = require("fs")
-  // .readFileSync("./input.txt")
-  .readFileSync("/dev/stdin")
+  .readFileSync("./input.txt")
+  // .readFileSync("/dev/stdin")
   .toString()
   .trim()
   .split("\n");
@@ -10,8 +10,6 @@ let input = require("fs")
 class Node {
   constructor(value) {
     this.value = value;
-    this.next = null;
-    this.prev = null;
   }
 }
 
@@ -30,10 +28,9 @@ class LinkedList {
     }
     this.tail = newNode;
     this.length++;
-
-    return newNode;
   }
   shift() {
+    console.log(this.head.next);
     this.head = this.head.next;
     this.length--;
   }
@@ -42,7 +39,6 @@ class LinkedList {
 function getResult() {
   const linkedList = new LinkedList();
   Array.from({ length: input[0] }, (_, idx) => linkedList.push(idx + 1));
-
   while (linkedList.length !== 1) {
     linkedList.shift();
     linkedList.push(linkedList.head.value);
