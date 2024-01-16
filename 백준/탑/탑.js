@@ -17,6 +17,7 @@ function getResult() {
     while (stack.length > 0 && stack[stack.length - 1][0] < towers[i]) {
       stack.pop();
     }
+
     if (stack.length > 0) {
       result[i] = stack[stack.length - 1][1];
     }
