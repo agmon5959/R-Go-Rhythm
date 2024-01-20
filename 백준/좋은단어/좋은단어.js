@@ -10,6 +10,7 @@ function getGoodWords(wordArr) {
       resultArr.push(words[i]);
       continue;
     }
+
     if (words[i] === resultArr[resultArr.length - 1]) {
       resultArr.pop();
     } else {
@@ -17,11 +18,7 @@ function getGoodWords(wordArr) {
     }
   }
 
-  if (resultArr.length === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return !resultArr.length;
 }
 
 function getResult() {
