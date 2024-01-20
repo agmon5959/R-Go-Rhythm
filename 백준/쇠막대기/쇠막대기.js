@@ -1,5 +1,4 @@
 // [실버2] https://www.acmicpc.net/problem/10799
-// let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 const path = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 let input = require("fs").readFileSync(path).toString().trim().split("\n");
 
