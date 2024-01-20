@@ -1,4 +1,4 @@
-// [실버2] https://www.acmicpc.net/problem/3986
+// [실버4] https://www.acmicpc.net/problem/3986
 const path = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 let input = require("fs").readFileSync(path).toString().trim().split("\n");
 
