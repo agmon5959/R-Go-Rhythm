@@ -39,8 +39,15 @@ function getResult() {
     }
   }
 
-  console.log(sizeArr.length);
-  console.log(Math.max(...sizeArr));
+  const maxSize = Math.max(...sizeArr);
+
+  if (maxSize === 0) {
+    console.log(0);
+    console.log(0);
+  } else {
+    console.log(sizeArr.length);
+    console.log(maxSize);
+  }
 }
 
 getResult();
